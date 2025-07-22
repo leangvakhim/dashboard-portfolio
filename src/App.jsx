@@ -20,6 +20,7 @@ import PortfolioField from './component/Portfolio/PortfolioField'
 import BlogField from './component/Blog/BlogField'
 import Login from './page/Login'
 import ProtectedRoute from './component/ProtectedRoute'
+import 'preline'
 
 function App() {
 
