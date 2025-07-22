@@ -55,7 +55,7 @@ const Login = () => {
                 icon: 'error',
                 title: 'Login Failed',
                 // More robust error message for debugging
-                text: err.response?.data?.error || err.message || 'Invalid credentials'
+                text: 'Incorrect Username or Password' || 'Invalid credentials'
             });
         }
     };
