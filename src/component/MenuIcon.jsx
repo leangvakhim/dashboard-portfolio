@@ -6,6 +6,7 @@ const MenuIcon = () => {
             <a
                 class="text-xl icon-hover cursor-pointer text-heading"
                 id="headerCollapse"
+                // onClick={onToggle}
                 data-hs-overlay="#application-sidebar-brand"
                 aria-controls="application-sidebar-brand"
                 aria-label="Toggle navigation"
