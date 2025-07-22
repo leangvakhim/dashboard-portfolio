@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate  } from 'react-router-dom'
 import Image from './page/Image'
 import Information from './page/Information'
@@ -20,9 +20,24 @@ import PortfolioField from './component/Portfolio/PortfolioField'
 import BlogField from './component/Blog/BlogField'
 import Login from './page/Login'
 import ProtectedRoute from './component/ProtectedRoute'
-import 'preline'
+import 'preline/preline';
 
 function App() {
+  useEffect(() => {
+    const initPreline = () => {
+      if (typeof window !== 'undefined' && window.HSOverlay?.init) {
+        window.HSOverlay.init();
+      }
+    };
+
+    // Wait until DOM is ready before initializing Preline
+    if (document.readyState === 'complete') {
+      initPreline();
+    } else {
+      window.addEventListener('load', initPreline);
+      return () => window.removeEventListener('load', initPreline);
+    }
+  }, []);
 
   return (
     <Router>
