@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Profile from '../Profile'
 import Swal from 'sweetalert2';
 import { API_BASEURL, API_ENDPOINTS, axiosInstance } from '../APIConfig';
+import MenuIcon from '../MenuIcon';
 
 const ImageHeader = ({setImages, setFilteredImages}) => {
 
@@ -94,13 +95,7 @@ const ImageHeader = ({setImages, setFilteredImages}) => {
         <header class=" bg-white shadow-md rounded-md w-full text-sm py-4 px-6">
             <nav class=" w-ful flex items-center justify-between" aria-label="Global">
                 <ul class="icon-nav flex items-center gap-4">
-                    <li class="relative xl:hidden">
-                        <a class="text-xl  icon-hover cursor-pointer text-heading"
-                            id="headerCollapse" data-hs-overlay="#application-sidebar-brand"
-                            aria-controls="application-sidebar-brand" aria-label="Toggle navigation" href="javascript:void(0)">
-                            <i class="ti ti-menu-2 relative z-1"></i>
-                        </a>
-                    </li>
+                    <MenuIcon/>
 
                     <li className="relative">
                         <form className="">
